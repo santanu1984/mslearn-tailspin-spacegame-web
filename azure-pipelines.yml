@@ -35,7 +35,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(System.DefaultWorkingDirectory)/tailspin-spacegame-web/bin'
+    SourceFolder: '$(System.DefaultWorkingDirectory)/mslearn-tailspin-spacegame-web/bin'
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
