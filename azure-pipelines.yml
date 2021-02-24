@@ -21,10 +21,12 @@ steps:
     projects: '**/*.csproj'
     feedsToUse: 'select'
     vstsFeed: '2133364c-2723-4895-85ef-6fbad293a24e'
+
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    projects: '**/*.cjproj'
+    projects: '**/*.csproj'
+
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
