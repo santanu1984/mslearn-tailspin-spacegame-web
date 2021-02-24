@@ -15,7 +15,7 @@ steps:
 - task: UseDotNet@2
   displayName: 'Use .NET Core SDK $(dotnetSdkVersion)'
   inputs:
-    version: '$(dotnetSdkVersion)'
+    version: '$(dotnetSdkVersion)'  
 
 - task: Npm@1
   displayName: 'Run npm install'
@@ -29,7 +29,7 @@ steps:
   displayName: 'Run gulp tasks'
 
 - script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
-  displayName: 'Write build info'
+  displayName: 'Write build info_new'
   workingDirectory: $(wwwrootDir)
 
 - task: DotNetCoreCLI@2
