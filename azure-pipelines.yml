@@ -33,5 +33,18 @@ steps:
     projects: '**/*.csproj'
     testRunTitle: 'build test'
 
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(system.DefaultWorkingDirectory)/mslearn-tailspin-spacegame-web/bin'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+
+
 - script : echo all done
   displayName : 'alldone'
